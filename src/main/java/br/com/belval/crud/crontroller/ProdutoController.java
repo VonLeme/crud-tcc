@@ -92,21 +92,5 @@ public class ProdutoController {
 		
 		return "redirect:/produto/list";
 	}
-	
-	@GetMapping("/post-to-post-form")
-	public String getPostToPostForm() {
-		return "post-to-post-form";
-	}
-	
-	@PostMapping("/redirectPostToPost")
-	public ModelAndView redirectPostToPost(HttpServletRequest request) {
-	    request.setAttribute(
-	      View.RESPONSE_STATUS_ATTRIBUTE, HttpStatus.TEMPORARY_REDIRECT);
-	    return new ModelAndView("redirect:/redirectedPostToPost");
-	}
-	
-	@PostMapping("/redirectedPostToPost")
-	public ModelAndView redirectedPostToPost() {
-	    return new ModelAndView("post-to-post-form");
-	}
+
 }
